@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Banking and Transaction Management System</title>
+</head>
+<body>
+<table align="center" width="800" cellpadding="0" cellspacing="0" border="0">
+<tr>
+<td>
+
+<h1>Banking and Transaction Management System (Fortran + Julia)</h1>
+
+<p>A console banking program written twice, with <b>identical behavior and identical on-screen text</b>:</p>
+
+<table border="1" cellpadding="6" cellspacing="0">
+<tr><th>Version</th><th>File</th><th>Language</th></tr>
+<tr><td>Fortran</td><td><code>fortran/bank.f90</code></td><td>Fortran 2008, compiled with gfortran</td></tr>
+<tr><td>Julia</td><td><code>julia/bank.jl</code></td><td>Julia 1.10 or newer</td></tr>
+</table>
+
+<p>Features: the starting balance is PHP 5000.00, and a menu loop offers Check Balance, Deposit, Withdraw, View Transaction History and Exit. All input is validated and the program never crashes on bad input. Only successful transactions are recorded, and end of input (EOF) exits cleanly. Both source files start with a <b>concept map</b> showing where each required programming concept is used.</p>
+
+<p>Both versions use only the standard library (Julia uses <code>Printf</code>, which ships with Julia).</p>
+
+<h2>Project structure</h2>
+
+<pre>
+fortran/bank.f90        Fortran source
+julia/bank.jl           Julia source
+tests/inputs/           test1.txt ... test10.txt (stdin input, one value per line)
+tests/TEST_CASES.md     10 test cases: description, inputs, expected output, pass/fail
+tests/run_tests.sh      run all tests on both versions (Linux / macOS / Git Bash)
+tests/run_tests.ps1     run all tests on both versions (Windows PowerShell)
+sample_runs/            real captured output: fortran_testN.txt, julia_testN.txt
+</pre>
+
+<h2>Input rules (same in both versions)</h2>
+
+<table border="1" cellpadding="6" cellspacing="0">
+<tr><th>Input</th><th>Result</th></tr>
+<tr><td>Menu: anything other than a whole number 1-5 (<code>0</code>, <code>6</code>, <code>abc</code>, <code>2.5</code>, empty line)</td><td><code>Error: Invalid choice...</code>, and the menu is shown again</td></tr>
+<tr><td>Amount: empty line</td><td><code>Error: No amount entered...</code>, and you are asked again</td></tr>
+<tr><td>Amount: not a plain number (<code>abc</code>, <code>12abc</code>, <code>1e3</code>, <code>1,000</code>)</td><td><code>Error: Invalid amount...</code>, and you are asked again</td></tr>
+<tr><td>Amount: negative / zero</td><td>its own error message, and you are asked again</td></tr>
+<tr><td>Amount: more than 2 decimal places (<code>12.345</code>)</td><td><code>Error: Amount can have at most 2 decimal places.</code></td></tr>
+<tr><td>Amount: over PHP 1000000.00</td><td><code>Error: Amount exceeds the limit...</code> (limit per transaction)</td></tr>
+<tr><td>Withdrawal greater than the balance</td><td>error that shows the current balance; the withdrawal is cancelled and you return to the menu</td></tr>
+</table>
+
+<p>Both programs check the <i>text</i> first (an optional sign, digits, and at most one decimal point) and only then convert it to a number. This guarantees that Fortran and Julia accept exactly the same inputs. Without this check, Fortran's <code>read</code> would accept things like <code>1d3</code> or <code>12 abc</code> that Julia's <code>tryparse</code> rejects. The balance is rounded to centavos after every transaction, so floating-point errors cannot build up.</p>
+
+<hr>
+
+<h2>1. Install the tools</h2>
+
+<p>You need <b>gfortran</b> (for the Fortran version) and <b>Julia 1.10+</b> (for the Julia version). Check what you already have:</p>
+
+<pre>
+gfortran --version
+julia --version
+</pre>
+
+<h3>Windows</h3>
+
+<p><b>Julia (via juliaup):</b> in PowerShell:</p>
+<pre>
+winget install --name Julia --id 9NJNWW8PVKMN -e -s msstore
+</pre>
+<p>Close and reopen the terminal, then run <code>julia --version</code>.</p>
+
+<p><b>gfortran, option A (MSYS2, recommended):</b></p>
+<pre>
+winget install --id MSYS2.MSYS2 -e
+</pre>
+<p>Open the <b>"MSYS2 UCRT64"</b> shell from the Start menu and run:</p>
+<pre>
+pacman -Syu                                   # if it asks to close the window, reopen it and run again
+pacman -S mingw-w64-ucrt-x86_64-gcc-fortran
+</pre>
+<p>Add the compiler to your user PATH (in PowerShell), then reopen the terminal:</p>
+<pre>
+[Environment]::SetEnvironmentVariable("Path", [Environment]::GetEnvironmentVariable("Path", "User") + ";C:\msys64\ucrt64\bin", "User")
+</pre>
+
+<p><b>gfortran, option B (WinLibs via winget, no MSYS2):</b></p>
+<pre>
+winget install --id BrechtSanders.WinLibs.POSIX.UCRT -e
+</pre>
+<p>Reopen the terminal and check <code>gfortran --version</code>.</p>
+
+<h3>macOS</h3>
+
+<pre>
+brew install gcc                                  # includes gfortran (needs Homebrew: https://brew.sh)
+curl -fsSL https://install.julialang.org | sh     # installs juliaup + Julia
+</pre>
+
+<h3>Linux</h3>
+
+<pre>
+sudo apt install gfortran          # Debian / Ubuntu
+sudo dnf install gcc-gfortran      # Fedora
+curl -fsSL https://install.julialang.org | sh     # installs juliaup + Julia
+</pre>
+
+<hr>
+
+<h2>2. Compile and run</h2>
+
+<p>Run these commands from the project folder.</p>
+
+<h3>Fortran</h3>
+
+<pre>
+gfortran -std=f2008 -Wall -o fortran/bank fortran/bank.f90
+./fortran/bank
+</pre>
+<p>On Windows (PowerShell):</p>
+<pre>
+gfortran -std=f2008 -Wall -o fortran\bank.exe fortran\bank.f90
+.\fortran\bank.exe
+</pre>
+<p>If Windows says a DLL such as <code>libgfortran-5.dll</code> is missing, either add <code>C:\msys64\ucrt64\bin</code> to PATH (see above) or compile with <code>-static</code>.</p>
+
+<h3>Julia (no compile step)</h3>
+
+<pre>
+julia julia/bank.jl
+</pre>
+
+<hr>
+
+<h2>3. Run the tests</h2>
+
+<p>Run one test by piping an input file into the program:</p>
+
+<pre>
+./fortran/bank       &lt; tests/inputs/test7.txt
+julia julia/bank.jl  &lt; tests/inputs/test7.txt
+</pre>
+<p>(In PowerShell, <code>&lt;</code> does not work. Use <code>Get-Content tests\inputs\test7.txt | .\fortran\bank.exe</code>.)</p>
+
+<p>To run <b>all</b> tests on <b>both</b> versions, save the real output to <code>sample_runs/</code> and check that Fortran and Julia match:</p>
+
+<pre>
+bash tests/run_tests.sh                                     # Linux / macOS / Git Bash
+</pre>
+<pre>
+powershell -ExecutionPolicy Bypass -File tests\run_tests.ps1   # Windows
+</pre>
+
+<p>Each test prints <code>MATCH</code> or <code>DIFFERENT</code>. Then compare the outputs with the expected lines in <code>tests/TEST_CASES.md</code> and tick Pass/Fail.</p>
+
+<p>Note: gfortran on Windows ends lines with CRLF, while Julia uses LF. The run scripts ignore this difference, and the visible text is the same.</p>
+
+</td>
+</tr>
+</table>
+</body>
+</html>
