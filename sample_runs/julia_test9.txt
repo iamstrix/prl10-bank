@@ -1,0 +1,51 @@
+===========================================
+      BANKING AND TRANSACTION SYSTEM
+===========================================
+Account initialized.
+Starting balance: PHP 5000.00
+
+---------------- MAIN MENU ----------------
+1. Check Balance
+2. Deposit Money
+3. Withdraw Money
+4. View Transaction History
+5. Exit
+Enter your choice (1-5): 
+--- Withdraw Money ---
+Enter amount to withdraw: 
+Withdrawal successful. Amount withdrawn: PHP 5000.00
+New balance: PHP 0.00
+
+---------------- MAIN MENU ----------------
+1. Check Balance
+2. Deposit Money
+3. Withdraw Money
+4. View Transaction History
+5. Exit
+Enter your choice (1-5): 
+--- Withdraw Money ---
+Enter amount to withdraw: 
+Error: Insufficient funds. Your current balance is PHP 0.00.
+Withdrawal cancelled.
+
+---------------- MAIN MENU ----------------
+1. Check Balance
+2. Deposit Money
+3. Withdraw Money
+4. View Transaction History
+5. Exit
+Enter your choice (1-5): 
+--- Transaction History ---
+No.  Type                  Amount     Balance After
+---  ----------  ----------------  ----------------
+  1  Withdrawal  PHP      5000.00  PHP         0.00
+Total transactions: 1
+
+---------------- MAIN MENU ----------------
+1. Check Balance
+2. Deposit Money
+3. Withdraw Money
+4. View Transaction History
+5. Exit
+Enter your choice (1-5): 
+Thank you for using the Banking and Transaction System. Goodbye!

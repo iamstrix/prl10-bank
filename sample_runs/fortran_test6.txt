@@ -1,0 +1,84 @@
+===========================================
+      BANKING AND TRANSACTION SYSTEM
+===========================================
+Account initialized.
+Starting balance: PHP 5000.00
+
+---------------- MAIN MENU ----------------
+1. Check Balance
+2. Deposit Money
+3. Withdraw Money
+4. View Transaction History
+5. Exit
+Enter your choice (1-5): 
+Error: Invalid choice. Please enter a number from 1 to 5.
+
+---------------- MAIN MENU ----------------
+1. Check Balance
+2. Deposit Money
+3. Withdraw Money
+4. View Transaction History
+5. Exit
+Enter your choice (1-5): 
+Error: Invalid choice. Please enter a number from 1 to 5.
+
+---------------- MAIN MENU ----------------
+1. Check Balance
+2. Deposit Money
+3. Withdraw Money
+4. View Transaction History
+5. Exit
+Enter your choice (1-5): 
+Error: Invalid choice. Please enter a number from 1 to 5.
+
+---------------- MAIN MENU ----------------
+1. Check Balance
+2. Deposit Money
+3. Withdraw Money
+4. View Transaction History
+5. Exit
+Enter your choice (1-5): 
+Error: Invalid choice. Please enter a number from 1 to 5.
+
+---------------- MAIN MENU ----------------
+1. Check Balance
+2. Deposit Money
+3. Withdraw Money
+4. View Transaction History
+5. Exit
+Enter your choice (1-5): 
+Error: Invalid choice. Please enter a number from 1 to 5.
+
+---------------- MAIN MENU ----------------
+1. Check Balance
+2. Deposit Money
+3. Withdraw Money
+4. View Transaction History
+5. Exit
+Enter your choice (1-5): 
+Error: Invalid choice. Please enter a number from 1 to 5.
+
+---------------- MAIN MENU ----------------
+1. Check Balance
+2. Deposit Money
+3. Withdraw Money
+4. View Transaction History
+5. Exit
+Enter your choice (1-5): 
+--- Deposit Money ---
+Enter amount to deposit: 
+Error: Invalid amount. Please enter a number such as 1500 or 250.75.
+Enter amount to deposit: 
+Error: No amount entered. Please type a number.
+Enter amount to deposit: 
+Deposit successful. Amount deposited: PHP 250.75
+New balance: PHP 5250.75
+
+---------------- MAIN MENU ----------------
+1. Check Balance
+2. Deposit Money
+3. Withdraw Money
+4. View Transaction History
+5. Exit
+Enter your choice (1-5): 
+Thank you for using the Banking and Transaction System. Goodbye!

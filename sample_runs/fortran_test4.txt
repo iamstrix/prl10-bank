@@ -1,0 +1,43 @@
+===========================================
+      BANKING AND TRANSACTION SYSTEM
+===========================================
+Account initialized.
+Starting balance: PHP 5000.00
+
+---------------- MAIN MENU ----------------
+1. Check Balance
+2. Deposit Money
+3. Withdraw Money
+4. View Transaction History
+5. Exit
+Enter your choice (1-5): 
+--- Deposit Money ---
+Enter amount to deposit: 
+Error: Amount must be greater than zero.
+Enter amount to deposit: 
+Error: Negative amounts are not allowed.
+Enter amount to deposit: 
+Deposit successful. Amount deposited: PHP 300.00
+New balance: PHP 5300.00
+
+---------------- MAIN MENU ----------------
+1. Check Balance
+2. Deposit Money
+3. Withdraw Money
+4. View Transaction History
+5. Exit
+Enter your choice (1-5): 
+--- Transaction History ---
+No.  Type                  Amount     Balance After
+---  ----------  ----------------  ----------------
+  1  Deposit     PHP       300.00  PHP      5300.00
+Total transactions: 1
+
+---------------- MAIN MENU ----------------
+1. Check Balance
+2. Deposit Money
+3. Withdraw Money
+4. View Transaction History
+5. Exit
+Enter your choice (1-5): 
+Thank you for using the Banking and Transaction System. Goodbye!

@@ -1,0 +1,91 @@
+===========================================
+      BANKING AND TRANSACTION SYSTEM
+===========================================
+Account initialized.
+Starting balance: PHP 5000.00
+
+---------------- MAIN MENU ----------------
+1. Check Balance
+2. Deposit Money
+3. Withdraw Money
+4. View Transaction History
+5. Exit
+Enter your choice (1-5): 
+--- Deposit Money ---
+Enter amount to deposit: 
+Deposit successful. Amount deposited: PHP 1500.00
+New balance: PHP 6500.00
+
+---------------- MAIN MENU ----------------
+1. Check Balance
+2. Deposit Money
+3. Withdraw Money
+4. View Transaction History
+5. Exit
+Enter your choice (1-5): 
+--- Withdraw Money ---
+Enter amount to withdraw: 
+Withdrawal successful. Amount withdrawn: PHP 2000.00
+New balance: PHP 4500.00
+
+---------------- MAIN MENU ----------------
+1. Check Balance
+2. Deposit Money
+3. Withdraw Money
+4. View Transaction History
+5. Exit
+Enter your choice (1-5): 
+--- Deposit Money ---
+Enter amount to deposit: 
+Deposit successful. Amount deposited: PHP 750.50
+New balance: PHP 5250.50
+
+---------------- MAIN MENU ----------------
+1. Check Balance
+2. Deposit Money
+3. Withdraw Money
+4. View Transaction History
+5. Exit
+Enter your choice (1-5): 
+--- Withdraw Money ---
+Enter amount to withdraw: 
+Withdrawal successful. Amount withdrawn: PHP 1200.25
+New balance: PHP 4050.25
+
+---------------- MAIN MENU ----------------
+1. Check Balance
+2. Deposit Money
+3. Withdraw Money
+4. View Transaction History
+5. Exit
+Enter your choice (1-5): 
+--- Deposit Money ---
+Enter amount to deposit: 
+Deposit successful. Amount deposited: PHP 3000.00
+New balance: PHP 7050.25
+
+---------------- MAIN MENU ----------------
+1. Check Balance
+2. Deposit Money
+3. Withdraw Money
+4. View Transaction History
+5. Exit
+Enter your choice (1-5): 
+--- Transaction History ---
+No.  Type                  Amount     Balance After
+---  ----------  ----------------  ----------------
+  1  Deposit     PHP      1500.00  PHP      6500.00
+  2  Withdrawal  PHP      2000.00  PHP      4500.00
+  3  Deposit     PHP       750.50  PHP      5250.50
+  4  Withdrawal  PHP      1200.25  PHP      4050.25
+  5  Deposit     PHP      3000.00  PHP      7050.25
+Total transactions: 5
+
+---------------- MAIN MENU ----------------
+1. Check Balance
+2. Deposit Money
+3. Withdraw Money
+4. View Transaction History
+5. Exit
+Enter your choice (1-5): 
+Thank you for using the Banking and Transaction System. Goodbye!

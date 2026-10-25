@@ -1,0 +1,39 @@
+===========================================
+      BANKING AND TRANSACTION SYSTEM
+===========================================
+Account initialized.
+Starting balance: PHP 5000.00
+
+---------------- MAIN MENU ----------------
+1. Check Balance
+2. Deposit Money
+3. Withdraw Money
+4. View Transaction History
+5. Exit
+Enter your choice (1-5): 
+--- Deposit Money ---
+Enter amount to deposit: 
+Error: Amount can have at most 2 decimal places.
+Enter amount to deposit: 
+Error: Amount exceeds the limit of PHP 1000000.00 per transaction.
+Enter amount to deposit: 
+Deposit successful. Amount deposited: PHP 1000000.00
+New balance: PHP 1005000.00
+
+---------------- MAIN MENU ----------------
+1. Check Balance
+2. Deposit Money
+3. Withdraw Money
+4. View Transaction History
+5. Exit
+Enter your choice (1-5): 
+Current balance: PHP 1005000.00
+
+---------------- MAIN MENU ----------------
+1. Check Balance
+2. Deposit Money
+3. Withdraw Money
+4. View Transaction History
+5. Exit
+Enter your choice (1-5): 
+Thank you for using the Banking and Transaction System. Goodbye!

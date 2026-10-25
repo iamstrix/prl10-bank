@@ -13,7 +13,7 @@ To run every test on both versions, save the output in `sample_runs/` and compar
 
 **Expected output:** to keep this document short, each test lists only the *key lines* in order. The banner, the menu, and the `Enter your choice (1-5):` prompts are left out (the full screen is shown once, in TC07). The real captured outputs go in `sample_runs/fortran_testN.txt` and `sample_runs/julia_testN.txt`.
 
-**Pass/Fail:** fill in after running the tests. Status at the time of writing: *not run yet, because gfortran and Julia were not installed on the development machine.* A test passes when the output contains the expected lines **and** the Fortran and Julia outputs are identical (the run scripts check the second part automatically).
+**Pass/Fail:** all 10 tests were run on 2026-10-25 with gfortran 16.2.0 (WinLibs, Windows) and Julia 1.13.2, and all passed on both versions. A test passes when the output contains the expected lines **and** the Fortran and Julia outputs are identical (the run scripts check the second part automatically).
 
 ---
 
@@ -35,7 +35,7 @@ Thank you for using the Banking and Transaction System. Goodbye!
 
 | Fortran | Julia | Outputs identical |
 |---|---|---|
-| ☐ Pass ☐ Fail | ☐ Pass ☐ Fail | ☐ Yes ☐ No |
+| ☑ Pass ☐ Fail | ☑ Pass ☐ Fail | ☑ Yes ☐ No |
 
 ---
 
@@ -59,7 +59,7 @@ Thank you for using the Banking and Transaction System. Goodbye!
 
 | Fortran | Julia | Outputs identical |
 |---|---|---|
-| ☐ Pass ☐ Fail | ☐ Pass ☐ Fail | ☐ Yes ☐ No |
+| ☑ Pass ☐ Fail | ☑ Pass ☐ Fail | ☑ Yes ☐ No |
 
 ---
 
@@ -83,7 +83,7 @@ Thank you for using the Banking and Transaction System. Goodbye!
 
 | Fortran | Julia | Outputs identical |
 |---|---|---|
-| ☐ Pass ☐ Fail | ☐ Pass ☐ Fail | ☐ Yes ☐ No |
+| ☑ Pass ☐ Fail | ☑ Pass ☐ Fail | ☑ Yes ☐ No |
 
 ---
 
@@ -115,7 +115,7 @@ Thank you for using the Banking and Transaction System. Goodbye!
 
 | Fortran | Julia | Outputs identical |
 |---|---|---|
-| ☐ Pass ☐ Fail | ☐ Pass ☐ Fail | ☐ Yes ☐ No |
+| ☑ Pass ☐ Fail | ☑ Pass ☐ Fail | ☑ Yes ☐ No |
 
 ---
 
@@ -141,7 +141,7 @@ Thank you for using the Banking and Transaction System. Goodbye!
 
 | Fortran | Julia | Outputs identical |
 |---|---|---|
-| ☐ Pass ☐ Fail | ☐ Pass ☐ Fail | ☐ Yes ☐ No |
+| ☑ Pass ☐ Fail | ☑ Pass ☐ Fail | ☑ Yes ☐ No |
 
 ---
 
@@ -169,7 +169,7 @@ Thank you for using the Banking and Transaction System. Goodbye!
 
 | Fortran | Julia | Outputs identical |
 |---|---|---|
-| ☐ Pass ☐ Fail | ☐ Pass ☐ Fail | ☐ Yes ☐ No |
+| ☑ Pass ☐ Fail | ☑ Pass ☐ Fail | ☑ Yes ☐ No |
 
 ---
 
@@ -280,7 +280,7 @@ Thank you for using the Banking and Transaction System. Goodbye!
 
 | Fortran | Julia | Outputs identical |
 |---|---|---|
-| ☐ Pass ☐ Fail | ☐ Pass ☐ Fail | ☐ Yes ☐ No |
+| ☑ Pass ☐ Fail | ☑ Pass ☐ Fail | ☑ Yes ☐ No |
 
 ---
 
@@ -303,7 +303,7 @@ End of input reached. Exiting program.
 
 | Fortran | Julia | Outputs identical |
 |---|---|---|
-| ☐ Pass ☐ Fail | ☐ Pass ☐ Fail | ☐ Yes ☐ No |
+| ☑ Pass ☐ Fail | ☑ Pass ☐ Fail | ☑ Yes ☐ No |
 
 ---
 
@@ -330,7 +330,7 @@ Total transactions: 1
 
 | Fortran | Julia | Outputs identical |
 |---|---|---|
-| ☐ Pass ☐ Fail | ☐ Pass ☐ Fail | ☐ Yes ☐ No |
+| ☑ Pass ☐ Fail | ☑ Pass ☐ Fail | ☑ Yes ☐ No |
 
 ---
 
@@ -355,4 +355,4 @@ Current balance: PHP 1005000.00
 
 | Fortran | Julia | Outputs identical |
 |---|---|---|
-| ☐ Pass ☐ Fail | ☐ Pass ☐ Fail | ☐ Yes ☐ No |
+| ☑ Pass ☐ Fail | ☑ Pass ☐ Fail | ☑ Yes ☐ No |
